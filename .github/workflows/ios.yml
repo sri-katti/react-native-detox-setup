@@ -32,7 +32,7 @@ jobs:
 
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
-      run: yarn install
+      run: sudo xcode-select -r && yarn
 
     - name: Cache Pods
       uses: actions/cache@v1
