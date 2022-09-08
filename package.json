@@ -1,0 +1,34 @@
+{
+  "name": "react-native-spaceviewer",
+  "version": "2.1.4",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint packages --fix",
+    "lint-check": "eslint packages --quiet",
+    "watch": "yarn workspace spaceviewer-common watch",
+    "postinstall": "yarn jetify; yarn workspace mobile postinstall",
+    "mobile/start": "yarn workspace mobile start",
+    "web/start": "yarn workspace web start",
+    "run-android": "yarn workspace mobile run-android",
+    "run-ios": "yarn workspace mobile run-ios"
+  },
+  "dependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.3",
+    "react-redux": "7.2.0"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "1.0.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
+    "detox": "^14.5.1",
+    "typescript": "3.8.2"
+  }
+}
