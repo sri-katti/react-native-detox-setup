@@ -29,6 +29,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
+        git clone https://github.com/InstaSell/Instasell-new.git
         cd Instasell-new
         git checkout rahul/detox-setup
         yarn
