@@ -28,7 +28,10 @@ jobs:
     #   run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
     - name: Install Dependencies
-      run: cd Instasell-new && git checkout rahul/detox-setup && yarn
+      run: |
+        cd Instasell-new
+        git checkout rahul/detox-setup
+        yarn
 
     - name: Update Pods
       run: |
