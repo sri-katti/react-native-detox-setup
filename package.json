@@ -1,5 +1,5 @@
 {
-  "name": "RNDetoxGa",
+  "name": "katti",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,24 @@
     "lint": "eslint .",
     "build-detox-android": "detox build -c android.emu.debug",
     "test-detox-android": "detox test -c android.emu.debug"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "./ios/build/Build/Products/Release-iphonesimulator/Instasell.app",
+        "build": "xcodebuild -workspace ios/Instasell.xcworkspace -configuration debug -scheme Instasell -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 13"
+      },
+      "ios.sim.release": {
+        "binaryPath": "./ios/build/Build/Products/Release-iphonesimulator/Instasell.app",
+        "build": "xcodebuild -workspace ios/Instasell.xcworkspace -configuration debug -scheme Instasell -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 13"
+      }
+    },
+    "test-runner": "jest",
+    "specs": "e2e"
   },
   "dependencies": {
     "detox": "^15.1.4",
