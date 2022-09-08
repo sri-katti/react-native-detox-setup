@@ -1,4 +1,4 @@
-# Space Viewer - Rocket Infos (Monorepo)
+# Space Viewer - React Native Test
 
 NOTE: This project (API) is deprecated. Please see [Space Seek](https://github.com/reime005/spaceseek/) for the follow up.
 
