@@ -1,34 +1,32 @@
 {
-  "name": "react-native-spaceviewer",
-  "version": "2.1.4",
+  "name": "RNDetoxGa",
+  "version": "0.0.1",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "scripts": {
-    "lint": "eslint packages --fix",
-    "lint-check": "eslint packages --quiet",
-    "watch": "yarn workspace spaceviewer-common watch",
-    "postinstall": "yarn jetify; yarn workspace mobile postinstall",
-    "mobile/start": "yarn workspace mobile start",
-    "web/start": "yarn workspace web start",
-    "run-android": "yarn workspace mobile run-android",
-    "run-ios": "yarn workspace mobile run-ios"
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "build-detox-android": "detox build -c android.emu.debug",
+    "test-detox-android": "detox test -c android.emu.debug"
   },
   "dependencies": {
+    "detox": "^15.1.4",
     "react": "16.9.0",
-    "react-native": "0.61.3",
-    "react-redux": "7.2.0"
+    "react-native": "0.61.5"
   },
   "devDependencies": {
-    "@react-native-community/eslint-config": "1.0.0",
-    "@typescript-eslint/parser": "^2.26.0",
+    "@babel/core": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "@react-native-community/eslint-config": "^0.0.6",
+    "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
-    "husky": "^3.0.1",
-    "lint-staged": "^9.2.0",
-    "detox": "^14.5.1",
-    "typescript": "3.8.2"
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
