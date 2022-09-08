@@ -37,8 +37,8 @@ jobs:
     - name: Update Pods
       run: |
         gem update cocoapods xcodeproj
-        cd ios && pod install && cd ..
+        cd ios && rm -rf Podfile.lock && pod install && cd ..
     - run: arch -x86_64 brew tap wix/brew
     - run: arch -x86_64 brew install applesimutils
-    - run: yarn detox build e2e --configuration ios.sim.release
-    - run: yarn detox test e2e --configuration ios.sim.release --cleanup --debug-synchronization 200
+    - run: yarn detox build -c ios 
+    - run: yarn detox test -c ios
