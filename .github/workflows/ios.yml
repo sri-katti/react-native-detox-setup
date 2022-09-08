@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 15
 
     env:
-      DEVELOPER_DIR: ../../../Applications/Xcode.app
+      DEVELOPER_DIR: /Library/Developer/CommandLineTools
 
     steps:
     - name: Checkout
