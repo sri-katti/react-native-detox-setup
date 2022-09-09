@@ -9,5 +9,5 @@ cd ..
 brew tap wix/brew
 brew install applesimutils
 yarn global add detox-cli
-yarn detox-build
-yarn detox-test
+detox build -c ios
+detox test -c ios
