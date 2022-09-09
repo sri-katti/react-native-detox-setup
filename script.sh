@@ -4,9 +4,9 @@ git checkout unit-tests
 yarn
 yarn patch-package
 cd ios
-rm -rf Podfile.lock 
 pod install
 cd ..
+yarn react-native link
 brew tap wix/brew
 brew install applesimutils
 yarn global add detox-cli
