@@ -1,6 +1,6 @@
 git clone https://github.com/InstaSell/Instasell-new.git
 cd Instasell-new
-git checkout rahul/detox-setup
+git checkout unit-tests
 yarn
 cd ios
 rm -rf Podfile.lock 
