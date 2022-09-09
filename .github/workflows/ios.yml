@@ -28,7 +28,7 @@ jobs:
     #   run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
     - name: Install Dependencies
-      run: sh script.sh
+      run: ls && sh script.sh
 
     # - name: Update Pods
     #   run: cd Instasell-new
