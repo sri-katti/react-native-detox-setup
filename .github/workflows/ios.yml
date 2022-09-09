@@ -39,6 +39,8 @@ jobs:
         cd ios && rm -rf Podfile.lock && pod install && cd ..
     - run: brew tap wix/brew
     - run: brew install applesimutils
+    - run: ls
+    - run: cd Instasell-new
     - run: yarn global add detox-cli
     - run: yarn detox-build
     - run: yarn detox-test
