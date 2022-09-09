@@ -28,18 +28,18 @@ jobs:
     #   run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
     - name: Install Dependencies
-    - run: git clone https://github.com/InstaSell/Instasell-new.git
-    - run: cd Instasell-new
-    - run: git checkout rahul/detox-setup
-    - run: yarn
+      run: git clone https://github.com/InstaSell/Instasell-new.git
+      run: cd Instasell-new
+      run: git checkout rahul/detox-setup
+      run: yarn
 
     - name: Update Pods
-    - run: cd Instasell-new
-    - run: cd ios 
-    - run: rm -rf Podfile.lock && pod install && cd ..
-    - run: brew tap wix/brew
-    - run: brew install applesimutils
-    - run: ls
-    - run: yarn global add detox-cli
-    - run: yarn detox-build
-    - run: yarn detox-test
+      run: cd Instasell-new
+      run: cd ios 
+      run: rm -rf Podfile.lock && pod install && cd ..
+      run: brew tap wix/brew
+      run: brew install applesimutils
+      run: ls
+      run: yarn global add detox-cli
+      run: yarn detox-build
+      run: yarn detox-test
