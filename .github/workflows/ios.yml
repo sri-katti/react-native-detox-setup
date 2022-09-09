@@ -1,0 +1,42 @@
+name: iOS
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    timeout-minutes: 15
+
+    steps:
+    # - name: Checkout
+    #   uses: actions/checkout@v1
+    #   with:
+    #     fetch-depth: 1
+
+    # - name: Node
+    #   uses: actions/setup-node@v1
+
+    # - name: Cache node modules
+    #   uses: actions/cache@v1
+    #   id: cache
+    #   with:
+    #     path: node_modules
+    #     key: node-modules-${{ hashFiles('**/yarn.lock') }}
+
+    # - name: Rebuild detox
+    #   if: steps.cache.outputs.cache-hit == 'true'
+    #   run: yarn detox clean-framework-cache && yarn detox build-framework-cache
+
+    - name: Install Dependencies
+      run: ls && sh script.sh
+
+    # - name: Update Pods
+    #   run: cd Instasell-new
+    # - run: cd ios 
+    # - run: rm -rf Podfile.lock && pod install && cd ..
+    # - run: brew tap wix/brew
+    # - run: brew install applesimutils
+    # - run: ls
+    # - run: yarn global add detox-cli
+    # - run: yarn detox-build
+    # - run: yarn detox-test
