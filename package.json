@@ -30,11 +30,11 @@
     "specs": "e2e"
   },
   "dependencies": {
-    "detox": "^15.1.4",
     "react": "16.9.0",
     "react-native": "0.61.5"
   },
   "devDependencies": {
+    "detox": "^19.7.0",
     "@babel/core": "^7.8.3",
     "@babel/runtime": "^7.8.3",
     "@react-native-community/eslint-config": "^0.0.6",
