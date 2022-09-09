@@ -39,5 +39,6 @@ jobs:
         cd ios && rm -rf Podfile.lock && pod install && cd ..
     - run: arch -x86_64 brew tap wix/brew
     - run: arch -x86_64 brew install applesimutils
+    - run: yarn global add detox-cli
     - run: detox build -c ios 
     - run: detox test -c ios
