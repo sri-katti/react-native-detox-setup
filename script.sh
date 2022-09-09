@@ -2,6 +2,7 @@ git clone https://github.com/InstaSell/Instasell-new.git
 cd Instasell-new
 git checkout unit-tests
 yarn
+yarn patch-package
 cd ios
 rm -rf Podfile.lock 
 pod install
